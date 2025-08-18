@@ -121,6 +121,53 @@ Note:
     * The values which is non-empty string, numbers other than 0, objects, arrays and all other vaules are truthy value
 */
 
+console.log("************************************************************");
+
+/*
+more about strings to manipulate like .toUpperCase(), .toLowerCase(), .trim (), .slice(), etc 
+*/
+
+//lowercase to uppercase
+let name = "heLlO";
+console.log(name); //heLlO
+console.log(name.toUpperCase()); //HELLO
+
+//uppercase to lowercase
+let anotherName = "HeLLo WorlD!";
+console.log(anotherName); //HeLLo WorlD!
+console.log(anotherName.toLowerCase()); //hello world!
+
+//.trim() ->  It is used remove whitespace character from both the ends
+let nameOfPer = "     JavaScript     ";
+console.log(nameOfPer); /*     JavaScript     */
+console.log(nameOfPer.trim()); //JavaScript
+
+//.slice(startIndex, endIndex) -> It is used to extract a portation of array or string and return new array or string but doesn't modify the original array or string
+let cityName = "Hyderabad";
+console.log(cityName); //Hyderabad
+console.log(cityName.slice(6, 9)); //bad
+
+//.charAt(index) -> It is used to return a character at a specific index
+let heroName = "Krishna";
+console.log(heroName); //krishna
+console.log(heroName.charAt(3)); //3 because index number '3' returns a 's' of krishna
+
+//.indexOf() -> It is used to show the first appereance of the search value and show the index number 
+let intro = "My name is good";
+console.log(intro); //My name is good
+console.log(intro.indexOf("is")); //8
+
+//.includes() -> It is used to check if string contains search value and return true or false
+console.log(intro.includes("good")); //true
+
+//.length() -> It used to check the length of the string how character are there in string
+let game = "BGMI";
+console.log(game.length); //4
+
+//There are some more string methods to learn using mdn JS document https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+ 
+
 
 
 
