@@ -87,12 +87,12 @@ console.log("************************************************************");
 //Arithmetic Operators
 let num1 = 15;
 let num2 = 2;
-console.log(num1+num2); //17
-console.log(num1 - num2); //13
-console.log(num1 * num2); //30
-console.log(num1 / num2); //7.5
-console.log(num1 % num2); //1 
-console.log(num2**3); //8
+console.log(num1+num2); //17 Addition
+console.log(num1 - num2); //13 Subtraction
+console.log(num1 * num2); //30 Multiplication
+console.log(num1 / num2); //7.5 Division
+console.log(num1 % num2); //1 Remainder
+console.log(num2**3); //8 power
 
 
 
