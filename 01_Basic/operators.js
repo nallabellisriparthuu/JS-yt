@@ -44,7 +44,31 @@ Logical Value -> It is used to compare values and returns boolean datatypes valu
             
 */
 
-let myAge = 25;
-let ageToVote = 18;
+let inputAge = 20;
+let eligibleAge = 18;
+
+let rightToVote = inputAge > eligibleAge;
+console.log(rightToVote); //true
+
+let notRightToVote = inputAge < eligibleAge;
+console.log(notRightToVote); //false
+
+//AND (&&)
+console.log(rightToVote && rightToVote); //true
+console.log(rightToVote && notRightToVote); //false
+console.log(notRightToVote && rightToVote); //false
+console.log(notRightToVote && notRightToVote); //false
+
+//OR (||)
+console.log(rightToVote || rightToVote); //true
+console.log(rightToVote || notRightToVote); //true
+console.log(notRightToVote || rightToVote); //true
+console.log(notRightToVote || notRightToVote); //false
+
+//Not (!)
+console.log(!rightToVote); //false
+console.log(!notRightToVote); //true
+
+
 
 
