@@ -57,6 +57,8 @@ let isGood = null;
 console.log(isGood);
 console.log(typeof isGood); // It is a bug from JS thats why it return obj
 
+console.log("************************************************************");
+
 // non-primitive (reference) data-type:
 //-------------------------------------
 
@@ -80,6 +82,17 @@ function greet(){
 greet();
 console.log(typeof greet);
 
+console.log("************************************************************");
+
+//Arithmetic Operators
+let num1 = 15;
+let num2 = 2;
+console.log(num1+num2); //17
+console.log(num1 - num2); //13
+console.log(num1 * num2); //30
+console.log(num1 / num2); //7.5
+console.log(num1 % num2); //1 
+console.log(num2**3); //8
 
 
 
