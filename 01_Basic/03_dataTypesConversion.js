@@ -124,8 +124,21 @@ Note:
 console.log("************************************************************");
 
 /*
+-> string: It is used to store one or more character using double quote ("Hello"), single quote ('Hello'), template string with interpolation (`Hello ${name}`). we can create string using initialising, object.
+
 more about strings to manipulate like .toUpperCase(), .toLowerCase(), .trim (), .slice(), etc 
 */
+
+//creating string using initialisation
+let authorname = "JavaScript"
+let anotherAuthorname = "HTML"
+let OneAnotherAuthorname = "ReactJs"
+
+//creating string using object
+let myJob = new String("Developer");
+console.log(myJob); //[String: 'Developer']
+console.log(typeof myJob); //object 
+
 
 //lowercase to uppercase
 let name = "heLlO";
