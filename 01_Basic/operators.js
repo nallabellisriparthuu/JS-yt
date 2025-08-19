@@ -28,6 +28,70 @@ console.log(num5 !== num4); //true - strict not-equality
 console.log("*******************************************************************");
 
 /*
+
+comparision between data-type
+-----------------------------
+JavaScript provide different types of comparision operator and behaves depend upon there sistuation wheather type coresion is allowd or not.
+
+1. Losse equality (==): loose equality perform type coresion it try to convert one or both operand to comman type before compairing the operation. (Prefer not to use).
+
+2. Strict equality (===): strict equality don't perform type coresion it checks the both operands are different type and return false (Use to prefer)
+
+*/
+
+//loose equality (==)
+console.log(5 == "5"); //true
+console.log("0" == false); //true
+console.log(null == undefined); //true
+console.log(null == null); //true
+console.log(undefined == undefined); //true
+console.log(true == "1"); //true
+console.log(NaN == NaN); //true
+console.log(null == 0); //false
+
+
+
+//strict equality (===)
+console.log(5 === "5"); //false
+console.log(5 === 5); //true
+console.log(null === undefined); //false
+console.log(null === null); //true
+console.log(undefined === undefined); //true
+console.log(NaN === NaN); //false
+console.log(null === 0); //false
+
+//some more examples
+console.log([] == 0); //true
+//console.log([] === 0); //false
+console.log([1,2] == "1,2"); //true
+console.log(null == 0); //false
+console.log(null >= 0); //true
+
+/*
+Explanation
+-----------
+[] == 0
+→ [] becomes "", then number 0.
+→ 0 == 0 → true
+
+[] === 0
+→ Strict check: array (object) vs number → false
+
+[1,2] == "1,2"
+→ Array converted to string "1,2" → true
+
+null == 0
+→ null only loosely equals undefined, not 0 → false
+
+null >= 0
+→ In comparisons, null is converted to 0.
+→ 0 >= 0 → true
+
+*/
+
+console.log("*******************************************************************");
+
+/*
 Logical Value -> It is used to compare values and returns boolean datatypes values.They are AND(&&), OR(||), Not(!)
     && ->   true - true = true
             true - false = false
