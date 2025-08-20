@@ -136,6 +136,66 @@ console.log(story); //This is my story which is not intresting to tell
 console.log(story.lastIndexOf("ch")); //20
 console.log(story.lastIndexOf("me")); //-1
 
+/*
+
+Joining & Splitting
+-------------------
+-> .join(): The '.join()' method is used to concat all element array in to a single array as a string
+-> .split(): The '.split()' method is used to divied a string in to substring and convert into an array. The original array will remain the same.
+
+*/
+
+//join
+let num11 = ["The", "man", "is"]
+console.log(typeof num11); //object
+
+let result = num11.join();
+console.log(result); //The, man, is
+console.log(typeof result); //string
+
+//split
+let yourName = "My name is JavaScript"
+console.log(yourName); //My name is JavaScript
+console.log(typeof yourName); //string
+
+let splitYourName = yourName.split(" ");
+console.log(splitYourName); //[ 'My', 'name', 'is', 'JavaScript' ]
+console.log(typeof splitYourName); //object
+console.log(yourName); //My name is JavaScript (this is remain same array)
+
+/*
+
+Extracting / Slicing: .slice(), .splice()
+--------------------
+-> .slice(startIndex, lastIndex(length of the string or array)): The .slice() method is used to extract a portion of array or string and return the new array or string and doesn't modify the original array or string.
+
+-> .splice(startIndex, deleteCount(length of array), item1, item2, item3, ......): The .splice() method a powerfull method used to modify the content of array and add, or remove the element from the array and return the remove array element as a new array
+
+*/
+
+let nameIs = "This is Hero"
+console.log(nameIs); //This is Hero
+console.log(typeof nameIs); //string
+let sliceNameIs = nameIs.slice(5, 12)
+console.log(sliceNameIs); //is Hero
+console.log(typeof sliceNameIs); //string
+
+let name1 = ["sai", "is", 1, 3, 4, 2]
+console.log(name1); //[ 'sai', 'is', 1, 3, 4, 2 ]
+console.log(typeof name1); //object
+let sliceName1 = name1.slice(1, 4)
+console.log(sliceName1); //[ 'is', 1, 3 ]
+
+//splice
+let color = ["red", "blue", "orange"]
+console.log(color); //["red", "blue", "orange"]
+console.log(color.splice(1, 0, "white", "pink")); //added the element and '0' indecate no delete count and return empty array
+console.log(color); //[ 'red', 'white', 'pink', 'blue', 'orange' ]
+
+console.log(color.splice(1, 3)); //[ 'white', 'pink', 'blue' ] remove the element
+console.log(color); //having element [ 'red', 'orange' ]
+
+
 
 
 
