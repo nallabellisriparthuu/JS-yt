@@ -94,6 +94,24 @@ console.log(subjects); //['JS', 'React', 'HTML', 'Telugu', 'Hindi', 'English', '
 subjects.shift();
 console.log(subjects); //['React', 'HTML', 'Telugu',  'Hindi', 'English', '01', '03']
 
+//...spread operator
+let value1 = ["one", "two"]
+let value2 = ["three", "four"]
+let value3 = [...value1, ...value2, "five", "six"]
+console.log(value1); //[ 'one', 'two' ]
+console.log(value2); //[ 'three', 'four' ]
+console.log(value3); //[ 'one', 'two', 'three', 'four', 'five', 'six' ]
+
+
+/*
+Difference between push, concat methods and spread operator
+-----------------------------------------------------------
+-> The .push() method is used to used add one or more elements at the end of the array and modify the original array because mutable and return the new length of array.
+-> The .concat() method is used to join one or more array or values doesn't modify the original array immtable and return the new array
+-> The ...spread operator is used for array or object used to copy, merge and pass the element indivdually and doesn't modify the original array
+*/
+
+
 /*
 
 searching: .includes(), .indexOf(), .lastIndexOf()
@@ -195,6 +213,11 @@ console.log(color); //[ 'red', 'white', 'pink', 'blue', 'orange' ]
 console.log(color.splice(1, 3)); //[ 'white', 'pink', 'blue' ] remove the element
 console.log(color); //having element [ 'red', 'orange' ]
 
+/*
+Difference between slice and splice
+-----------------------------------
+-> The .slice(startIndex, lastIndex) method is the immutable it doesn't modify the original array and return the new arrya or the shallow copy of the array, Whereas .splice(startIdex, deleteCount, item1, item2, .....) method is the mutable it modfiy the original array and we can add, remove or replace the elements.
+*/
 
 
 
