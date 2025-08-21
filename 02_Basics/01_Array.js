@@ -227,7 +227,7 @@ Difference between slice and splice
 -> The .slice(startIndex, lastIndex) method is the immutable it doesn't modify the original array and return the new arrya or the shallow copy of the array, Whereas .splice(startIdex, deleteCount, item1, item2, .....) method is the mutable it modfiy the original array and we can add, remove or replace the elements.
 */
 
-
+//Array.flat():- 
 
 
 
