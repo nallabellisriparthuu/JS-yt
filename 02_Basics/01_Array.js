@@ -104,15 +104,6 @@ console.log(value3); //[ 'one', 'two', 'three', 'four', 'five', 'six' ]
 
 
 /*
-Difference between push, concat methods and spread operator
------------------------------------------------------------
--> The .push() method is used to used add one or more elements at the end of the array and modify the original array because mutable and return the new length of array.
--> The .concat() method is used to join one or more array or values doesn't modify the original array immtable and return the new array
--> The ...spread operator is used for array or object used to copy, merge and pass the element indivdually and doesn't modify the original array
-*/
-
-
-/*
 
 searching: .includes(), .indexOf(), .lastIndexOf()
 ----------
@@ -165,11 +156,28 @@ Joining & Splitting
 
 //join
 let num11 = ["The", "man", "is"]
+let num111 = ["telugu", "man", "not"]
 console.log(typeof num11); //object
 
-let result = num11.join();
+let result = num11.join(num111);
 console.log(result); //The, man, is
 console.log(typeof result); //string
+//insted join we use concat
+let result11 = num11.concat(num111)
+console.log(result11); //[ 'The', 'man', 'is', 'The', 'man', 'is' ]
+console.log(typeof result11); //object
+//insted join, conact we use ...variableName
+let result111 = [...num11, ...num111, "telugu", "language"]
+console.log(result111); //['The', 'man', 'is', 'telugu', 'man', 'not', 'telugu', 'language']
+console.log(typeof result111); //object
+
+/*
+Difference between push, concat methods and spread operator
+-----------------------------------------------------------
+-> The .push() method is used to used add one or more elements at the end of the array and modify the original array because mutable and return the new length of array.
+-> The .concat() method is used to join one or more array or values doesn't modify the original array immtable and return the new array
+-> The ...spread operator is used for array or object used to copy, merge and pass the element indivdually and doesn't modify the original array
+*/
 
 //split
 let yourName = "My name is JavaScript"
