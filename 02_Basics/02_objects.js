@@ -5,10 +5,10 @@ What is objects
 
 way to create a object
 ----------------------
--> object literals
+-> object literals: This is the most comman way to create a objects.
 let variableName = {key: "value"}
 
--> using new keyword
+-> using new keyword: This new keyword object is also called singleton objects, it is less commonly used but important conceptually.
 let varibaleName = new Object();
 variableName.key = "value";
 */
@@ -158,4 +158,32 @@ console.log(mobile);
 mobile.color = {avalabileColor: "blue", avalabileColor1: "yello", avalabileColor2: "blk" }
 console.log(mobile);
 
+console.log("***************************************************************************");
 
+//Nested objects: - we can create an object that contain inside the object 
+let personInfo = {
+  personName: {
+    firstName: "Jai",
+    middleName: "Sri",
+    lastName: "Ram"
+  },
+  age: 20,
+  accessories: {
+    electornic: {
+      mobiles: {
+        phone: "Vivo",
+        color: "black"
+      },
+      bigScreen: {
+        tv: "Samsaung",
+        laptops: {
+          comp1: "dell",
+          comp2: "lenovo"
+        }
+      }
+    }
+  }
+} 
+
+console.log(personInfo);
+//accessing object using dot notation
