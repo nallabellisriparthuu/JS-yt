@@ -267,3 +267,25 @@ console.log(result1); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
 console.log(obj3); //{ name: 'sai', age: 20 }
 console.log(obj4); //{ role: 'developer', hight: 169 }
 
+//...spread operator
+console.log(obj3); //{ name: 'sai', age: 20 }
+console.log(obj2); //{ role: 'developer', hight: 169 }
+
+let anotherResult = {...obj3, ...obj2}
+console.log(anotherResult); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+
+let anotherResult1 = {...obj3, ...obj2, color: "white", isHandsome: true}
+console.log(anotherResult1);
+/*
+{
+  name: 'sai',
+  age: 20,
+  role: 'developer',
+  hight: 169,
+  color: 'white',
+  isHandsome: true
+}
+*/
+
+
+
