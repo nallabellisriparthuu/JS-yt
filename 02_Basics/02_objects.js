@@ -186,4 +186,84 @@ let personInfo = {
 } 
 
 console.log(personInfo);
+/*
+output
+------
+{
+  personName: { firstName: 'Jai', middleName: 'Sri', lastName: 'Ram' },
+  age: 20,
+  accessories: { electornic: { mobiles: [Object], bigScreen: [Object] } }
+}
+*/
+
 //accessing object using dot notation
+console.log(personInfo.personName); //{ firstName: 'Jai', middleName: 'Sri', lastName: 'Ram' }
+console.log(personInfo.personName.firstName); //Jai
+console.log(personInfo.personName.middleName); //Sri
+console.log(personInfo.personName.lastName); //Ram
+console.log(personInfo.age); //20
+console.log(personInfo.accessories); 
+/*
+{
+  electornic: {
+    mobiles: { phone: 'Vivo', color: 'black' },
+    bigScreen: { tv: 'Samsaung', laptops: [Object] }
+  }
+}
+*/
+console.log(personInfo.accessories.electornic);
+/*
+{
+  mobiles: { phone: 'Vivo', color: 'black' },
+  bigScreen: { tv: 'Samsaung', laptops: { comp1: 'dell', comp2: 'lenovo' } }
+}
+*/
+console.log(personInfo.accessories.electornic.mobiles); //{ phone: 'Vivo', color: 'black' }
+console.log(personInfo.accessories.electornic.mobiles.phone); //vivo
+console.log(personInfo.accessories.electornic.bigScreen.laptops.comp1); //dell
+//Like this we access deeply nested property some times it may cause error if intermidate keys are missing. To avoid this sistuation we use 'optional chaining (?.)'   
+console.log(personInfo.accessories?.electornic?.mobiles); //{ phone: 'Vivo', color: 'black' } this concepts will learn later.
+
+/*
+Combining Objects
+-----------------
+-> Objects can be merged in 2 ways using Object.assign() & ...spread operator
+->Object.assign(): The Object.assign() is used to copy all the list from the own object properties from one or more source object to a target object. It return modified target object.
+
+->...spread operator: The ...spread operator is used for array or object used to copy, merge and pass the element indivdually and doesn't modify the original array or object
+*/
+
+//Object.assign(target, source1, source2.....)
+let obj1 = {
+  name: "sai",
+  age: 20
+}
+console.log(obj1); //{ name: 'sai', age: 20 }
+
+let obj2 = {
+  role: "developer",
+  hight: 169
+}
+console.log(obj2); //{ role: 'developer', hight: 169 }
+
+let result = Object.assign(obj1, obj2);
+console.log(result); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+console.log(obj1); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+
+let obj3 = {
+  name: "sai",
+  age: 20
+}
+console.log(obj3); //{ name: 'sai', age: 20 }
+
+let obj4 = {
+  role: "developer",
+  hight: 169
+}
+console.log(obj4); //{ role: 'developer', hight: 169 }
+
+let result1 = Object.assign({}, obj3, obj4); //This is means it create a object in new object
+console.log(result1); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+console.log(obj3); //{ name: 'sai', age: 20 }
+console.log(obj4); //{ role: 'developer', hight: 169 }
+
