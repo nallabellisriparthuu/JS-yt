@@ -287,5 +287,63 @@ console.log(anotherResult1);
 }
 */
 
+/*Objects in Arrays (API Example)
+-> In the real-world application like API's or database, data often are come like a array in objects
+*/
+let user = [
+  {id1: "sai@google.com",
+  role: "Mern developer"},
+  {id2: "don@google.com",
+  role: "Java developer"}
+]
+console.log(user[1].role); //Java developer
+//We can iterate through such arrays with .map(), .forEach(), or loops. further
+
+/*
+Useful Object method
+--------------------
+* JavaScript provide some useful object methods like Object.key(obj), Object.value(obj), Object.entries(obj), hasOwnProperty()
+*/
+
+//Object.key(): The Object.key(obj) is used return an array of the given object of all keys in the object 
+console.log(obj3); //{ name: 'sai', age: 20 }
+let keyAccess = Object.keys(obj3);
+console.log(keyAccess); //[ 'name', 'age' ]
+
+//Object.values(): The Object.value(obj) is used to return an array of the given object of all values in the object.
+console.log(obj1); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+let valueAccess = Object.values(obj1);
+console.log(valueAccess); //[ 'sai', 20, 'developer', 169 ]
+
+//Object.entries(): The Object.entries() is used to return an array of key-value pair in object and we can iterate to them.
+console.log(obj1); //{ name: 'sai', age: 20, role: 'developer', hight: 169 }
+let entriesAccess = Object.entries(obj1);
+console.log(entriesAccess);
+/*
+[
+  [ 'name', 'sai' ],
+  [ 'age', 20 ],
+  [ 'role', 'developer' ],
+  [ 'hight', 169 ]
+]
+*/
+
+//Iterating
+for(let obj11 in obj1){
+  console.log(obj11);
+}
+/*
+name
+age
+role
+hight
+*/
+
+//hasOwnProperty: The hasOwnProperty is used to check if the property is exisit or not if exist return true or false
+console.log(obj1.hasOwnProperty("age")); //true
+console.log(obj1.hasOwnProperty("education")); //false
+
+
+
 
 
