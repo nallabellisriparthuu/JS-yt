@@ -227,7 +227,68 @@ Difference between slice and splice
 -> The .slice(startIndex, lastIndex) method is the immutable it doesn't modify the original array and return the new arrya or the shallow copy of the array, Whereas .splice(startIdex, deleteCount, item1, item2, .....) method is the mutable it modfiy the original array and we can add, remove or replace the elements.
 */
 
-//Array.flat():- 
+//Array.flat():- The Array.flat() method is used to create a new array with all sub-array elements and concat recursevly with the specific deepth.
+
+let numInSubNum = [1, 2, 3, [4, 5, 6], "One", "Two", ["Three", "Four", ["Five", "Six"]]];
+console.log(numInSubNum); //[1, 2, 3, [ 4, 5, 6 ], 'One', 'Two', [ 'Three', 'Four', [ 'Five', 'Six' ] ]]
+let result2 = numInSubNum.flat(Infinity);
+console.log(result2); // [1, 2, 3, 4, 5, 6, 'One',  'Two',  'Three', 'Four', 'Five', 'Six']
+
+//Array.isArray():- The Array.isArray() is used to determine that wheather given value is array or not. It return true if the value is array or it return false.
+
+let course = ["HTML", "CSS", "JS"];
+console.log(course); //[ 'HTML', 'CSS', 'JS' ]
+console.log(typeof course); //object
+let result3  = Array.isArray(course);
+console.log(result3); //true
+console.log(typeof result3); //boolean
+
+let name = "This is JavaScript";
+console.log(name); //This is JavaScript
+console.log(typeof name); //string
+let result4  = Array.isArray(name);
+console.log(typeof result4); //boolean
+
+//Array.from:- The Array.from() is used to create a new array or iterabale object and we can pass mapping as a 2nd arugument.
+
+let game = "This is Game";
+console.log(game); //This is Game
+console.log(typeof game); //string
+let val = Array.from(game);
+console.log(val); //['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'G', 'a', 'm', 'e']
+console.log(typeof val); //object
+
+//Array.of():- The Array.of() is used to create a new array from the variable number of arugument and type of argument where as Array() which is tricky with numbers, Array.of() avoids confusion.
+
+//Array.of()
+let score = {
+    win: 10,
+    lose: 5,
+    tie: 2
+}
+let mobile = ["Vivo", "One+", "Samsaung"]
+let story1 = "This is the funny story";
+
+let value = Array.of(score, mobile, story1);
+console.log(value); //[{ win: 10, lose: 5, tie: 2 }, [ 'Vivo', 'One+', 'Samsaung' ], 'This is the funny story']
+console.log(typeof value); //object
+
+let value11 = Array.of(2);
+console.log(value11); //[2]
+console.log(typeof value11); //object
+
+
+//Array()
+let name11 = new Array(5)
+console.log(name11); //[ <5 empty items> ]
+console.log(typeof name11); //object
+console.log(name11.length); //length of array is 5 but the it is empty
+
+
+
+
+
+
 
 
 
