@@ -122,3 +122,89 @@ console.log(isAmount(25, 50)); //75
 //Not overriding default parameter
 console.log(isAmount(55)); //80
 
+/*
+-> Key Takeaways
+    -> Functions group code into reusable blocks.
+    -> Parameters (definition) vs. Arguments (passed values).
+    -> return gives back a value, console.log() just prints.
+    -> Always handle missing inputs (undefined).
+    -> Use default parameters for cleaner, safer code.
+*/
+
+/*
+Unknown Number of Parameters
+----------------------------
+-> In the real-world application (ex: shopping cart) in that we don't know how many items/prices will come to calculate, In the function we can pass two arguments, if we pass two or more it fail to execute. To avoid that we use (...Rest) operator depending up on the sistutaion we call them as spread or rest operator.
+*/
+
+//passing two arguments in the function
+function itemPrice(price1, price2){
+    return price1 + price2;
+}
+console.log(itemPrice(159, 699)); //858
+
+/*
+passing argument using ...Rest operator
+-> ...Rest operator: This ...Rest operator is used in parameter to collect all extra argument into an array 
+*/
+function priceList(...price){
+    return price;
+}
+console.log(priceList(99, 2199, 299, 499, 699)); //[ 99, 2199, 299, 499, 699 ], Here The Rest operator bundel remain argument into an array
+
+//here mix parameter to rest operator
+function myprice(price1, price2, ...price){
+    console.log(price1);
+    console.log(price2);
+    console.log(price);
+}
+myprice(100, 200, 300, 400, 500) //100, 200, [ 300, 400, 500 ]
+//Interview Tip: This “mixed parameters + rest” example is often asked.
+
+//Passing object to the function
+let score = {
+    win: 10,
+    lose: 3,
+    tie: 2
+}
+function myObj(score){
+    return `I have win my ${score.win} matchs, lose my ${score.lose} matchs and tie ${score.tie} matchs`
+}
+console.log(myObj(score)); //I have win my 10 matchs, lose my 3 matchs and tie 2 matchs
+
+//we can pass objects directly also by calling the function
+let info = {
+    perName: "sai",
+    age: 20
+}
+function infoper(info){
+    return `My name is ${info.perName} and age is ${info.age}`
+}
+console.log(infoper(info)); //My name is sai and age is 20
+console.log(infoper({
+    perName: "JavaScript",
+    age: 30
+})); //My name is JavaScript and age is 30
+/*
+-> Risk: If property names change (e.g., perName → pername), your code may break.
+    -> JS solution → Add checks (if/else).
+    -> TS solution → Type safety prevents such errors.
+*/
+
+//Passing array to a function
+let arr = [100, 200, 300, 400, 500];
+function myArr(arr){
+    return arr[2]
+}
+console.log(myArr(arr)); //300
+console.log(myArr([199, 299, 399, 499, 599])); //399
+/*
+-> Key Takeaways (Functions Part 2)
+    -> Use rest operator (...) to accept an unknown number of arguments.
+    -> Rest collects values into an array (very handy with loops).
+    -> You can mix normal parameters + rest (common interview Q).
+    -> Objects can be passed into functions (direct or stored).
+    -> Arrays can also be passed and used inside functions.
+    -> Be cautious with property names in objects → JS has no type safety.
+*/
+
