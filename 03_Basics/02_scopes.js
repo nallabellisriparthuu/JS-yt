@@ -1,11 +1,13 @@
 /*
 What is scopes
 --------------
--> scopes determine the accessbility or visiblity of the varibales. They are global scope, block scope.
+-> scopes determine the accessbility or visiblity of the varibales. They are global scope, block scope and function scope.
 
 -> Global scopes: Varibale which are declare outside the block or function is called global scope. Ex: var, let, const => {}, function myfunc(){}
 
 -> Block scope: Varibales which are declare inside the block or function & acceesible in it is called block scope. It is introduce in ES6 version of JS. Ex: {let, const}, function myfunc(){let, const}
+
+-> Function scope: Function has its own scope. Once the varibale is declare inside the function that or not accessible outside the function. 
 */
 
 //global scope
@@ -60,3 +62,74 @@ inside block scope a -> 100
 outside block scope a -> 10
     ->  Both are a's safe and independent using for let and const, where as for var block scope leak and cause bugs.
 */
+
+/*
+Summary
+-------
+-> Scope = region where a variable is accessible.
+-> Block Scope → created with {}; let and const respect it.
+-> var ignores block scope → causes leaks and bugs → avoid using var.
+-> Global Scope = variables declared outside any block, available everywhere.
+-> Global object differs in Browser vs Node.js.
+*/
+
+//nested function
+function name1(){
+    const name = "JavaScript"
+    function name2(){
+        const anotherName = "TypeScript"
+        console.log(name);
+        console.log(anotherName);
+    }
+    //console.log(anotherName); //because it executed outside the function name2
+    console.log(name); //because it executed inside the function name1
+    name2() //when we call function name2 then only it will execute the function name2 log's
+}
+name1()
+/*
+Analogy: Children (name2) can always take ice cream from parents (name1) 🍦,
+but parents (name1) cannot take ice cream from children (name2).
+*/
+
+//scope in conditional statement applicable
+if(true){
+    const name = "sai";
+    if(name === "sai"){
+        const anothername = "leela";
+        console.log(name + anothername);
+    }
+    //console.log(anotherName); //because it executed outside the block of innerblock name
+    
+}
+
+//Functions & Hoisting: In the function declaration function can be called before or after the declaration because Js can move functions at the top of the scopes.
+
+//Function declaration
+console.log(greet("sai"));
+function greet(name){
+    return `Hello ${name}`;
+}
+console.log(greet("sai"));
+
+//function expression
+//console.log(name("pandu")); //ReferenceError: Cannot access 'name' before initialization
+const name = function(nickname){
+    return `Hello ${nickname}`
+}
+console.log(name("pandu"));
+/*
+-> Cannot be called before definition ❌.
+-> Reason → variable is hoisted, but not initialized.
+*/
+
+/*
+Summary
+-------
+-> Nested Scope: Child scopes can access parent variables, not the other way around.
+-> Functions always create new scopes.
+-> Conditionals (if, loops, etc.) also create scopes with let/const.
+-> Hoisting:
+    -> Function declarations → hoisted completely.
+    -> Function expressions → variable hoisted, but function not assigned → leads to error.
+*/
+
