@@ -62,8 +62,13 @@ if(isUnFollow){
     console.log("Is unfollow executed");
 }
 
-//Outside the block of code
+//Outside of the if block of code executed
 let name = "JavaScript";
 console.log(name); 
 
-//if...else: 
+//if...else: (if...else) condition block is execute when the if block of code is true, if it is false else block of code will execute
+
+//Lets check the person is eligible to vote or not
+let personAge = 25;
+let eligibleAgeToVote = 18;
+if()
