@@ -204,3 +204,61 @@ switch(true){
 // switch can compare against any value → strings, numbers, or other datatypes.
 // Advantage: No need to repeat == or ===. Syntax is simpler.
 
+/*
+Difference between loose equality(==) and strict equality(===)
+-> loose equality(==) compares only values after that perform type coresion which can leads to unexpected result and automatically convert to datatypes
+-> strict equality(===) compares both value and datatype and perform no type coresion
+*/
+
+//loose equality(==) and strict equality(===)
+
+//Lets check the age of 2 person in the formate of string and number
+let agePerson = 20; //number
+let anotherAgePerson = "20"; //string
+
+//loose equality
+let result2 = agePerson == anotherAgePerson;
+console.log(result2); //true beacuse it is type coresion string 5 converting to number 5
+
+//strict equality
+let result3 = agePerson === anotherAgePerson;
+console.log(result3); //false because it is no type coresion string 5 will not converting to number 5
+
+console.log(20 === 20); //true (prefer to use only strict eqyality to avoid bugs)
+
+//Ternary operator: This operator is work as a if...else statement in the shorter way
+let age = 20;
+let result = (age > 18) ? "eligible to vote" : "not eligile to vote";
+console.log(result);
+
+//Assignment operator: It is used to assigned a value and arthmetic values to the varibales
+let number = 20;
+number+=10;
+console.log(number);
+number-=5;
+console.log(number);
+number*=2;
+console.log(number);
+number/=2;
+console.log(number);
+number**=2;
+console.log(number);
+
+/*
+-> Complete List of Falsy Values
+    -> false
+    -> 0
+    -> -0 (negative zero)
+    -> 0n (BigInt zero)
+    -> "" (empty string)
+    -> null
+    -> undefined
+    -> NaN
+** Everything else is truthy.
+
+Truthy Examples
+    -> Non-empty strings: "0", "false", " " (space)
+    -> Arrays: [] (even empty arrays)
+    -> Objects: {} (even empty objects)
+    -> Functions: function() {}
+*/
