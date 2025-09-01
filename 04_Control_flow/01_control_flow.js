@@ -178,3 +178,24 @@ if(!isStudentPresent){
 }else{
     console.log("Student absent");
 }
+
+/*
+Switch statement
+----------------
+-> Switch statement is used to execute a different block of code based on a value of a single expression and after the each case we have to use 'break' keyword to stop the execution of after the each case. it is the alternative way of if...else if...else statement 
+*/
+
+//Lets check the final score of student Grade A to Fail using switch statement
+
+let studentScore = 70;
+
+switch(true){
+    case (studentScore >=90 && studentScore <=100):
+        console.log("GredeA");
+        break;
+    case (studentScore >= 80):
+        console.log("Grade B");
+        break;
+    default:
+        console.log("Grade C");
+}
