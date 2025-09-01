@@ -245,6 +245,9 @@ number**=2;
 console.log(number);
 
 /*
+-> Non-empty string → truthy → condition runs.
+-> Empty string "" → falsy → condition fails.
+
 -> Complete List of Falsy Values
     -> false
     -> 0
