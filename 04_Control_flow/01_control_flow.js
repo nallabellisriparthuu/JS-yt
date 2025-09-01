@@ -199,3 +199,8 @@ switch(true){
     default:
         console.log("Grade C");
 }
+
+//Note: 
+// switch can compare against any value → strings, numbers, or other datatypes.
+// Advantage: No need to repeat == or ===. Syntax is simpler.
+
