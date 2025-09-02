@@ -66,6 +66,8 @@ for(let myNum in num){
 /*
 Higher order array loop using forEach
 -> forEach method is the higher order function because it is the method of the array that accpets the function as a arugment. This is also know as callback function. It execute onces for each element of the array.
+
+-> For each loop is used to iterates over array values and does not return anything it shows always undefined and it is useful for (logging, pushing, modifying), not for building new arrays.
 */
 
 let games = ["Pubg", "candycrush", "freefire", "8ball pool"];
