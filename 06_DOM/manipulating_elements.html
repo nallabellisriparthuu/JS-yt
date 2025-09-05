@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating HTML elemnts</title>
+</head>
+<body>
+    
+    <!--.textContent-->
+    <p id="my-info">This is the paragraph <span style="display: none;">paragraph</span> text</p>
+
+    <!--.innerHTML-->
+    <h3 id="my-class">This is heading 3</h3>
+
+    <!--.innerText-->
+    <p id="my-hero">My father is my super <span style="display: none;">Super</span> hero</p>
+
+    <script>
+        /*
+        -> To manipulate the elements we have already learn how to select or accessing the element using DOM.
+
+        -> Now by selecting the elements we manuplate our HTML element using the below concepts.
+            -> .textContent()
+            -> .innerText()
+            -> .innerHTML();
+            -> .createElement()
+            -> .appendChild()
+            -> .append()
+        */
+
+//************************let dissucs one by one*******************************************
+
+        /*
+        -> .textContent(): The .textContent() is the property used to get or set the content of the node and all its decendants. It return the text same to same including hidden text.
+        */
+       let myInfo = document.getElementById("my-info");
+       //get the content
+       console.log(myInfo.textContent);
+       //set the content
+       myInfo.textContent = "This is dynamically paragraph"
+       console.log(myInfo.textContent);
+
+       /*
+       -> .innerHTML(): The .innerHTML() is used to get or set the HTML content including tag + text of the element. It allow us to insert and upadte the HTML markup dynamically
+       */
+       
+       let myId = document.getElementById("my-class");
+       //get the content
+       console.log(myId.innerHTML);
+       //set the content
+       myId.innerHTML = "<h1>This is heading 1</h1>"
+       console.log(myId.innerHTML);
+       
+       /*
+       -> .innerText: The .innerText is the DOM property used to get or set the content of the node by and all decendant and ignore the HTML tags and return in the human readable language. It not return hidden text of the element.
+       */
+       
+       let myHero = document.getElementById("my-hero");
+       //get the content
+       console.log(myHero.innerText);
+       //set the content
+       myHero.innerText = "This is dynamically written that my father is super hero"
+       console.log(myHero.innerText);
+       
+
+
+
+    </script>
+
+</body>
+</html>
