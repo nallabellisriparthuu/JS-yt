@@ -16,6 +16,11 @@
     <!--.innerText-->
     <p id="my-hero">My father is my super <span style="display: none;">Super</span> hero</p>
 
+    <!--createElement(), appenChild() & append()-->
+    <div id="my-elem"></div>
+    <div id="my-elem1"></div>
+    <div id="box"></div>
+
     <script>
         /*
         -> To manipulate the elements we have already learn how to select or accessing the element using DOM.
@@ -63,9 +68,41 @@
        myHero.innerText = "This is dynamically written that my father is super hero"
        console.log(myHero.innerText);
        
+        /*
+        -> createElement(): The createELement() is the method used to create a new HTML element dynamically using JavaScript, to insert that element in the exisiting memory we have 2 more method i.e we can use appendChild() or append()
 
+        -> appenChild(): The appendChild() is the method used to insert the nodes like element, text & comment as the last child of the parent node. It is often used together with createElement() method.
 
+        -> append(): The append() is the emthod used to insert the node like element, text, comment to the last child of the parent node. It more felxiable then appenChild(), in this method we can add multiple node at once and string text directly. It is often used togther with createElement() method.
+        */
+        
+        //Creating new element
+        let myElem = document.createElement("p");
+        //Add text content
+        myElem.innerText = "This is dynamic paragraph";
+        //appendChild in my-elem
+        document.getElementById("my-elem").appendChild(myElem)
+        console.log(myElem.innerText);
+        
+       
+        //creating new ul element
+        let myElemUl1 = document.createElement("ul");
+        //creating new li element
+        let myElemLi1 = document.createElement("li")
+        //add text content
+        myElemLi1.innerText = "Milk"
+        //creating new li element
+        let myElemLi2 = document.createElement("li")
+        //add text content
+        myElemLi2.innerText = "Tea";
 
+        //multiple append done 
+        myElemUl1.append(myElemLi1, myElemLi2);
+
+        //append to the my-elem1 
+        document.getElementById("my-elem1").append(myElemUl1)
+        console.log(myElemUl1.innerText);
+        
     </script>
 
 </body>
