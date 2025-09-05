@@ -17,7 +17,37 @@
     <input type="password" name="html">
 
     <!--getElementByTagName()-->
+    <p>This is One paragraph</p>
+    <p>This is Two paragraph</p>
+    <p>This is Three paragraph</p>
+    <h3>This is heading3.1</h3>
+    <h3>This is heading3.2</h3>
 
+    <!--getELementByClassName-->
+    <p class="message">This is p1</p>
+    <p class="message">This is p2</p>
+    <p class="message">This is p3</p>
+    
+    <div id="container">
+        <p class="message">This is p4</p>
+        <p class="message">This is p5</p>
+    </div>
+
+    <!--querySelector()-->
+    <p class="message1">This is msg1</p>
+    <p class="message1">This is msg2</p>
+
+    <div id="container1">
+        <p class="message1">This is msg3</p>
+        <p class="message1">This is msg4</p>
+    </div>
+
+    <h4>This is h4</h4>
+
+    <!--querySelectorAll()-->
+    <p class="my-class">This is my class1</p>
+    <p class="my-class">This is my class2</p>
+    <p class="my-class">This is my class3</p>
 
 
 
@@ -61,8 +91,51 @@
         console.log(telphone); //it select 1 element input type tel
         
         /*
-        -> getElementByTagName():
+        -> getElementByTagName(): The getElementByTagName() is the DOM method used to select te HTML element by there tag name like h1, p, li, div, etc. It return the HTMLCollection and match on all HTML elements and works on all entire document or specified element.
         */
+        
+        let para = document.getElementsByTagName("p");
+        console.log(para);
+
+        let heading = document.getElementsByTagName("h3");
+        console.log(heading);
+
+        /*
+        -> getElementByClassName(): The getElementByClassName() is the DOM method used to select all the elemnts with in the same class name. It return HTMLCollection of elements and multiple elements can have a same class name, so this method select the more than one elements and we can add this element in any DOM method/element also
+        */
+        
+        let msg = document.getElementsByClassName("message");
+        console.log(msg);
+
+        let cont = document.getElementById("container");
+        let msg1 = cont.getElementsByClassName("message");
+        console.log(msg1);
+
+        /*
+        -> querySelector(): The querySelector() is the DOM method it return the first element of that match the CSS selector. It can be id, class, tag. If the lement is found it return the object if not found null.
+        */
+
+        //id
+        let myId = document.querySelector("#container1");
+        console.log(myId);
+        
+        //class
+        let myClass = document.querySelector(".message1");
+        console.log(myClass); //It return only one element
+
+        //tag
+        let myTag = document.querySelector("h4");
+        console.log(myTag);
+        
+        /*
+        -> querySelectorAll(): The querySelectorAll() is the DOM method it retrun the all elements matching to the CSS selector. It returns NodeList and you can loop them using forEach.
+        */
+
+        let myClass1 = document.querySelectorAll(".my-class");
+        console.log(myClass1);
+        
+        
+        
         
 
     </script>
