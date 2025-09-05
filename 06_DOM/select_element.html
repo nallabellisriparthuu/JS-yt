@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecting element using DOM</title>
+</head>
+<body>
+    <!--getELementById()-->
+    <h1 id="para">This is Paragraph</h1>
+
+    <!--getElementByClassName()-->
+    <input type="text" name="html">
+    <input type="radio" name="javascript">
+    <input type="checkbox" name="javascript">
+    <input type="tel" name="dom">
+    <input type="password" name="html">
+
+    <!--getElementByTagName()-->
+
+
+
+
+    <script>
+        /*
+        selecting element
+        -----------------
+        -> To manipulate the element first we need to select or access the element using DOM. JavaScript provide some DOM selection method to find the elements using id, class, tag, css selector.
+
+        -> There are different method to select the element using
+        1. getElementByID()
+        2. getElementByName()
+        3. getELementByTagName()
+        4. getElementByClassName()
+        5. querySelector()
+        6. querySelectorAll()
+
+        */
+
+//-----------------------------Let disscus one by one--------------------------------------
+       
+        /*
+        -> getElementById(): The getElementById() is the DOM method it is used to select single & only one element using unique 'id' attribute. If the element is found it return the object, 'null' if not found. 
+        */
+
+        let myPara = document.getElementById("para");
+        console.log(myPara);
+
+
+        /*
+        -> getElementByName(): The getElementByName() is the Dom method used to select the using 'name' attribute. It return the nodeList of all matching element. mostly used for forms, radio button, checkbox, etc
+        */
+
+        let xml = document.getElementsByName("html");
+        console.log(xml); //it select 2 elements input type text & password
+
+        let js = document.getElementsByName("javascript");
+        console.log(js); //it select 2 elements input type radio & checkbox
+
+        let telphone = document.getElementsByName("dom");
+        console.log(telphone); //it select 1 element input type tel
+        
+        /*
+        -> getElementByTagName():
+        */
+        
+
+    </script>
+</body>
+</html>
