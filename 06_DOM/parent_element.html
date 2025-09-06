@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--Parent traversing-->
+    <!--Parent node-->
+    <div class="title">
+        <p class="text1">This is my paragraph</p>
+    </div>
+
+    <!--Selecting child element-->
+    <!--firstElementChild, lastElementChild-->
+    <div class="my-para">
+        <p>This is para1</p>
+        <p>This is para2</p>
+        <p>This is para3</p>
+        <p>This is para4</p>
+    </div>
+
+    <script>
+        /*
+        -> What is Traversing element
+        -> DOM traversing means navigating between the elements up -> parents, down -> childerns, sideways -> siblings
+        */
+
+        /*
+        -> Parent Traversel: In the parent traversel we have 2 property 1. parentNode & 2. parentElement.
+        
+        1. parentNode is the property that return the parent node using child node. It can be element, document or document fragment.
+
+        2. parentElement is the property that return only the parent node using child node. If the lement is not found retun null
+        */
+
+        let myText = document.querySelector(".text1");
+        console.log(myText.parentNode);
+        console.log(myText.parentElement);
+        
+        /*
+        -> Select child element: Getting child element from the using parent node, in that we have firstElementChild, lastELementChild and all childer element.
+        */
+        
+        let myPara = document.querySelector(".my-para");
+        console.log(myPara.firstElementChild);
+        console.log(myPara.lastElementChild);
+        
+        
+        
+        
+    </script>
+</body>
+</html>
