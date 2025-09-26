@@ -66,7 +66,7 @@ let age1 = Number(age);
 console.log(age1); //100
 console.log(typeof age1); //number
 
-//number -> string are two types 'String()', '.toString()'
+//number -> string. They are two types 'String()', '.toString()'
 
 //String()
 let paper = 256;
@@ -85,6 +85,9 @@ console.log(emiId1); //495672136423
 console.log(typeof emiId1); //string
 
 console.log("************************************************************");
+
+
+//Boolean
 
 let isFollow = 0;
 console.log(typeof isFollow); //number

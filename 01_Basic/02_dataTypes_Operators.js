@@ -67,7 +67,7 @@ let myArray = [1, 2, "hello", true];
 console.log(myArray);
 console.log(typeof myArray);
 
-//Objet
+//Object
 let person = {
     name: 'sai',
     age: 25
