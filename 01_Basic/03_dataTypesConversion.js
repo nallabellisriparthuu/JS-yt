@@ -144,11 +144,12 @@ console.log(typeof myJob); //object
 
 
 //lowercase to uppercase
+//uppercase
 let name = "heLlO";
 console.log(name); //heLlO
 console.log(name.toUpperCase()); //HELLO
 
-//uppercase to lowercase
+//lowercase
 let anotherName = "HeLLo WorlD!";
 console.log(anotherName); //HeLLo WorlD!
 console.log(anotherName.toLowerCase()); //hello world!
